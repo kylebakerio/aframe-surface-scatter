@@ -127,7 +127,7 @@ AFRAME.registerComponent('surface-scatter', {
 	},
 	remove() {
 		this.el.removeObject3D('instances');
-		this.el.removeEventListener('object3dset', resample);
+		this.el.removeEventListener('object3dset', this.resample);
 		this.data.object.removeEventListener('object3dset', this.update);
 	}
 });
